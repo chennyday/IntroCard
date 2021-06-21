@@ -1,0 +1,249 @@
+/*409401538戴宇辰*/
+
+/*light mode*/
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s linear;
+}
+
+.card {
+    width: 50%;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: black;
+}
+
+img{
+    float: left;
+    margin-right: 12px;
+}
+
+@media screen and (max-width: 768px){
+    img{
+        float: none;
+        margin-bottom: 12px;
+        margin-right: 0px;
+        
+    }
+
+    .imagebox{
+        text-align: center;
+    }
+
+    .card {
+        width: 50%;
+        padding: 16px;
+        border-radius: 12px;
+        background-color: #ffffff;
+        align-items: center;
+        
+    }
+}
+
+.button{
+    bottom: 5px;
+    position: absolute;
+    min-width: 230px;
+    margin: 1em;
+    padding: 0.3em;
+    background: linear-gradient(to right, #56ccf2, #2f80ed);
+    border: 0;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.button::before, .button::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #56ccf2, #2f80ed);
+    border-radius:20px;
+    transition: all .5s ease-in-out;
+}
+
+.button:hover::before{
+    filter: blur(5px);
+}
+
+.button:hover::after{
+    filter: blur(15px);
+}
+
+.button:hover{
+    animation:hue 3s linear infinite;
+}
+
+@keyframes hue {
+    0%{
+        filter: hue-rotate(0deg); 
+    }
+
+    100%{
+        filter: hue-rotate(360deg); 
+    }
+}
+.button span{
+    position: relative;
+    z-index: 3;
+    display:block;
+    padding:1.3em;
+    font-family: "Audiowide", sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #000;
+    border-radius:17px;
+}
+
+
+.neon{
+    background-color: #fff;
+    filter: brightness(1);
+    overflow: hidden;
+}
+
+.h1, .p1, .p2, .p3{
+    color: #000;
+    background:#fff;
+    font-weight:normal;
+    
+}
+
+.gradient{
+    background: #fff;
+}
+
+.dodge{
+    background: #fff;
+}
+
+/*dark mode*/
+.dark-body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #292929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-card{
+    width: 50%;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #000;
+    color: white;
+    animation: blink 3.0s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        box-shadow: 0 0 20px #f0f;
+    }
+    50% {
+        box-shadow: none;
+    }
+    100% {
+        box-shadow: 0 0 20px #f0f;
+    }
+}
+
+.neonOn{
+    background-color: #000000;
+    filter: brightness(200%);
+    overflow: hidden;
+}
+
+.h1Effect {
+    color: #ffffff;
+    background:#121212;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.p1Effect {
+    color: #ffffff;
+    background:#121212;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.p2Effect {
+    color: #ffffff;
+    background:#121212;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.p3Effect {
+    color: #ffffff;
+    background:#121212;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+h1::before {
+    content: '戴宇辰';
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(0.7px);
+}
+
+.p1::before {
+    content: '興趣：聽歌，打球，打遊戲';
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(0.7px);
+}
+
+.p2::before {
+    content: '專長：英文，程設';
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(0.7px);
+}
+
+.p3::before {
+    content: '防疫期間耍廢、看漫畫、看動畫、看劇、打遊戲';
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(0.7px); 
+}
+
+.gradientOn{
+    background: linear-gradient(114.5793141156962deg, rgba(6, 227, 250,1) 4.927083333333334%,rgba(229, 151, 64,1) 97.84374999999999%);
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    mix-blend-mode: multiply;
+}
+
+.dodgeOn {
+    background: radial-gradient(circle,white,black 35%) center / 25% 25%;
+    position: absolute;
+    top:-100%;
+    left:-100%;
+    right:0;
+    bottom:0;
+    mix-blend-mode: color-dodge;
+    animation: dodge-area 3s linear infinite;
+}
+@keyframes dodge-area {
+    to {
+        transform: translate(50%,50%);
+    }
+}

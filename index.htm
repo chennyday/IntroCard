@@ -1,0 +1,76 @@
+<!--409401538戴宇辰-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>409401538</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+</head>
+<body>
+    <div class = "card">
+        <div class = "imagebox">
+            <img src="me.jpg" alt="me" width= 200px; width = 200px;>
+        </div>
+        
+        <div class = "neon">
+            <span class = "h1">
+                <h1>戴宇辰<br></h1>
+            </span>
+        
+            <span class = "p1">
+                <p>興趣：聽歌，打球，打遊戲<br></p>
+            </span>
+
+            <span class = "p2">
+                <p>專長：英文，程設<br></p>
+            </span>
+
+            <span class = "p3">
+                <p>防疫期間耍廢、看漫畫、看動畫、看劇、打遊戲</p>
+            </span>
+
+            <span class = "gradient"></span>
+            <span class = "dodge"></span>
+        </div>
+    </div>
+
+    <button class="button" onclick="myFunction()">
+        <span>Toggle dark mode</span>
+    </button>
+
+<script>
+function myFunction() {
+   var body = document.body;
+   body.classList.toggle("dark-body");
+
+   var card = document.querySelector(".card");
+   card.classList.toggle("dark-card");
+
+   var neon = document.querySelector(".neon");
+   neon.classList.toggle("neonOn");
+
+   var h1 = document.querySelector(".h1");
+   h1.classList.toggle("h1Effect");
+
+   var p1 = document.querySelector(".p1");
+   p1.classList.toggle("p1Effect");
+
+   var p2 = document.querySelector(".p2");
+   p2.classList.toggle("p2Effect");
+
+   var p3 = document.querySelector(".p3");
+   p3.classList.toggle("p3Effect");
+
+   var gradient = document.querySelector(".gradient");
+   gradient.classList.toggle("gradientOn");
+
+   var dodge = document.querySelector(".dodge");
+   dodge.classList.toggle("dodgeOn");
+
+}
+</script>
+</body>
+</html>
